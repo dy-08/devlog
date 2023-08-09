@@ -21,6 +21,10 @@
    box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
    font-family: 'Roboto', sans-serif;
    letter-spacing: -1px;
@@ -90,4 +94,12 @@ nav {
 .header__menu__item { 
     padding: 8px 16px;
     font-weight: 400;
+}
+
+/* Aside */
+.arrow-up {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    color: var(--color-primary);
 }
