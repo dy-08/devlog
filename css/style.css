@@ -113,6 +113,7 @@ nav {
     right: 2rem;
     bottom: 2rem;
     color: var(--color-primary);
+    opacity: 0;
 }
 
 /* Home */
@@ -252,3 +253,33 @@ nav {
     font-weight: bold;
 }
 
+/* Footer */
+#contact {
+    background-color: var(--color-secondary-light);
+    padding: 3rem;
+}
+
+.contact {
+    background-color: var(--color-secondary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact__email {
+    outline: 1px solid var(--color-secondary-dark);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.contact__data {
+    color: var(--color-secondary-dark);
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    
+}
