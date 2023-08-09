@@ -62,6 +62,7 @@ button {
 
 /* Common */
 .section {
+    width: 100%;
     padding: 4rem 0;
     text-align: center;
 }
@@ -121,6 +122,10 @@ nav {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+.home__title {
+    font-size: 2rem;
+}
+
 .home__contact {
     font-size: 1rem;
     padding: 8px 16px;
@@ -160,7 +165,8 @@ nav {
 
 .skills__innerbox {
     background-color: var(--color-secondary-light);
-    padding: 2rem 6rem;
+    padding: 2rem 7rem;
+    border-radius: 4px;
 }
 
 .subtitle {
@@ -194,5 +200,55 @@ nav {
 
 .skills__description__item {
     padding-bottom: 0.4rem;
+}
+
+/* Projects */
+.projects__menu {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.active {
+    background-color: var(--color-secondary);
+    padding: 6px 24px;
+    border-radius: 4px;
+}
+
+.projects {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.project {
+    width: 49%;
+}
+
+.project__data {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.project__image {
+    border-radius: 8px;
+}
+
+.project__title { 
+    margin-right: 8px;
+}
+
+.project__type {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #E3E3E3;
+    letter-spacing: normal;
+    color: var(--color-white);
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
