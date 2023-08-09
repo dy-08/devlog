@@ -37,6 +37,7 @@ h1,h2,h3,p,ul {
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
@@ -116,4 +117,26 @@ nav {
     padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid var(--color-secondary-dark);
+}
+
+.about__description {
+    padding-bottom: 38px;
+    font-size: 1.2rem;
+}
+
+.about__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 54px;
+}
+
+.icon__github {
+    width: 44px;
+    height: 44px;
+}
+
+.icon__tistory {
+    width: 60px;
+    height: 60px;
 }
