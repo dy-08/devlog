@@ -49,13 +49,13 @@
         </a>
     </aside>
     <!-- Home -->
-    <section id="home">
+    <section id="home" class="section">
         <img class="avatar" src="images/profile.png" alt="Youngho Profile">
         <h2 class="title">" 어제보다 더 나은 개발자 "</h2>
         <a class="home__contact" href="#">CONTACT</a>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
         <h3 class="title">슬기로운 개발생활</h3>
         <div class="about__description">
             <p>2019 Nov ~ 2020 Apr</p>
@@ -71,55 +71,57 @@
         </ul>
     </section>
     <!-- Skills -->
-    <section id="Skills">                                               
+    <section id="Skills" class="section max-container">                                               
         <h3 class="title">저는 이렇게 코딩해요</h3>
-        <div>
-            <p>HTML&CSS</p>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-            <ul>
-                <li>웹표준을 준수하며 코딩</li>
-                <li>BEM 방법론을 사용</li>
-                <li>적응형보다 반응형 웹</li>
-                <li>여러 브라우저 환경 고려</li>
-            </ul>
-        </div>
-        <div>
-            <P>JavaScript</P>
-            <div>JSImage</div>
-            <ul>
-                <li>ES6+ 구문에 익숙</li>
-                <li>코드 리펙토링</li>
-                <li>웹 APIs 활용</li>
-                <li>타입스크립트 공부중</li>
-            </ul>
-        </div>
-        <div>
-            <p>Tools</p>
-            <ul>
-                <li>
-                    VSCode Image
-                    <p>VSCode</p>
-                </li>
-                <li>
-                    Git Image
-                    <p>Git</p>
-                </li>
-                <li>
-                    Figma Image
-                    <p>Figma</p>
-                </li>
-                <li>
-                    PhotoShop Image
-                    <p>Photo Shop</p>
-                </li>
-            </ul>
+        <div class="skills__container">
+            <section class="skills__innerbox">
+                <p class="subtitle">HTML&CSS</p>
+                <ul class="skills__markup__icons">
+                    <li><img src="images/skills/html.png" alt="HTML icon"></li>
+                    <li><img src="images/skills/css.png" alt="CSS icon"></li>
+                </ul>
+                <ul class="skills__description">
+                    <li class="skills__description__item">웹표준을 준수하며 코딩</li>
+                    <li class="skills__description__item">BEM 방법론을 사용</li>
+                    <li class="skills__description__item">적응형보다 반응형 웹</li>
+                    <li class="skills__description__item">여러 브라우저 환경 고려</li>
+                </ul>
+            </section>
+            <section class="skills__innerbox">
+                <P class="subtitle">JavaScript</P>
+                <div><img src="images/skills/js.png" alt="JavaScript icon"></div>
+                <ul class="skills__description">
+                    <li class="skills__description__item">ES6+ 구문에 익숙</li>
+                    <li class="skills__description__item">코드 리펙토링</li>
+                    <li class="skills__description__item">웹 APIs 활용</li>
+                    <li class="skills__description__item">타입스크립트 공부중</li>
+                </ul>
+            </section>
+            <section class="skills__otherbox">
+                <p class="subtitle">Tools</p>
+                <ul class="skills__tool__icons">
+                    <li>
+                        <img src="images/skills/vscode.png" alt="VSCode icon">
+                        <p>VSCode</p>
+                    </li>
+                    <li>
+                        <img src="images/skills/git.png" alt="Git icon">
+                        <p>Git</p>
+                    </li>
+                    <li>
+                        <img src="images/skills/figma.png" alt="Figma icon">
+                        <p>Figma</p>
+                    </li>
+                    <li>
+                        <img src="images/skills/photoshop.png" alt="PhotoShop icon">
+                        <p>Photo Shop</p>
+                    </li>
+                </ul>
+            </section>
         </div>
     </section>
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="section">
         <h3 class="title">프로젝트</h3>
         <nav>
             <ul>

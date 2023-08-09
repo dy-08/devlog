@@ -15,6 +15,14 @@
 
     /* Size */
     --size-max-width: 1200px;
+
+    /* Web Font */
+    --font-korean: var(--font-NotoSansKR);
+    --font-english: var(--font-Roboto);
+
+    /* Font */
+    --font-NotoSansKR:'Noto Sans KR', sans-serif;
+    --font-Roboto: 'Roboto', sans-serif;
 }
 
 * {
@@ -26,9 +34,10 @@ html {
 }
 
 body {
-   font-family: 'Roboto', sans-serif;
-   letter-spacing: -1px;
-   margin: 0;
+    font-family: var(--font-korean);
+    color: var(--color-primary);
+    letter-spacing: -1px;
+    margin: 0;
 }
 
 h1,h2,h3,p,ul {
@@ -52,12 +61,13 @@ button {
 }
 
 /* Common */
-section {
+.section {
     padding: 4rem 0;
     text-align: center;
 }
 
 nav {
+    font-family: var(--font-english);
     font-size: 1.2rem;
     font-weight: 500;
 }
@@ -94,7 +104,6 @@ nav {
 
 .header__menu__item { 
     padding: 8px 16px;
-    font-weight: 400;
 }
 
 /* Aside */
@@ -119,6 +128,7 @@ nav {
     border: 1px solid var(--color-secondary-dark);
 }
 
+/* About */
 .about__description {
     padding-bottom: 38px;
     font-size: 1.2rem;
@@ -140,3 +150,49 @@ nav {
     width: 60px;
     height: 60px;
 }
+
+/* Skills */
+.skills__container {
+    display: flex;
+    gap: 36px;
+    justify-content: space-between;
+}
+
+.skills__innerbox {
+    background-color: var(--color-secondary-light);
+    padding: 2rem 6rem;
+}
+
+.subtitle {
+    font-family: var(--color-english);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.skills__markup__icons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills__otherbox {
+    background-color:var(--color-secondary-light);
+    padding: 2rem 3.6rem;
+}
+
+.skills__tool__icons {
+    display: grid;
+    gap: 3.4rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills__description {
+    margin-top: 1.6rem;
+}
+
+.skills__description__item {
+    padding-bottom: 0.4rem;
+}
+
