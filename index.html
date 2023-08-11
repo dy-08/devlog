@@ -26,7 +26,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- JavaScript -->
-    <script type="module" src="scr/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -34,7 +35,7 @@
         <h1 class="header__logo">Thanks for Comming</h1>
         <nav>
             <ul class="header__menu">
-                <li><a class="header__menu__item" href="#">Home</a></li>
+                <li><a class="header__menu__item location" href="#">Home</a></li>
                 <li><a class="header__menu__item" href="#">About</a></li>
                 <li><a class="header__menu__item" href="#">Skills</a></li>
                 <li><a class="header__menu__item" href="#">Projects</a></li>
@@ -44,15 +45,17 @@
     </header>
     <!-- Aside -->
     <aside>
-        <a href="#" title="back to top">
-            <i class="fa-regular fa-circle-up fa-4x arrow-up"></i>
+        <a href="#" title="back to top" class="arrow-up">
+            <i class="fa-regular fa-circle-up fa-4x"></i>
         </a>
     </aside>
     <!-- Home -->
     <section id="home" class="section">
         <img class="avatar" src="images/profile.png" alt="Youngho Profile">
         <h2 class="title home__title">" 어제보다 더 나은 개발자 "</h2>
-        <a class="home__contact" href="#contact">CONTACT</a>
+        <div class="g">
+            <a class="home__contact" href="#contact">CONTACT</a>
+        </div>
     </section>
     <!-- About -->
     <section id="about" class="section">
@@ -66,8 +69,16 @@
             <p>컴퓨터공학과 졸업</p>
         </div>
         <ul class="about__icons">
-            <li><a href="https://github.com/dy-08/devlog" target="_blank"><img class="icon__github" src="images/about/github-mark-g.svg" alt=""></a></li>
-            <li><a href="https://dev-xoxo.tistory.com/" target="_blank"><img class="icon__tistory" src="images/about/tistory-mark-g.svg" alt=""></a></li>
+            <li>
+                <a href="https://github.com/dy-08/devlog" target="_blank">
+                    <img class="icon__github" src="images/about/github-mark.svg" alt="git linked">
+                </a>
+            </li>
+            <li>
+                <a href="https://dev-xoxo.tistory.com/" target="_blank">
+                    <img class="icon__tistory" src="images/about/tistory-mark.svg" alt="tistory linked">
+                </a>
+            </li>
         </ul>
     </section>
     <!-- Skills -->
@@ -124,15 +135,15 @@
     <section id="projects" class="section max-container">
         <h3 class="title">프로젝트</h3>
         <nav>
-            <ul class="projects__menu">
-                <li><a class="active" href="#">All</a></li>
-                <li><a href="#">Static</a></li>
-                <li><a href="#">Dynamic</a></li>
-                <li><a href="#">JavaScript</a></li>
+            <ul class="categories">
+                <li><button class="category category--selected" data-category="all" href="#">All</button></li>
+                <li><button class="category" data-category="static" href="#">Static</button></li>
+                <li><button class="category" data-category="dynamic" href="#">Dynamic</button></li>
+                <li><button class="category" data-category="javascript" href="#">JavaScript</button></li>
             </ul>
         </nav>
         <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="static">
                 <a href="#">
                     <img class="project__image" src="images/projects/Luxurious.png" alt="example-1">
                 </a>
@@ -141,7 +152,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project">
+            <li class="project" data-type="dynamic">
                 <a href="#" />
                     <img class="project__image" src="images/projects/SMA.png" alt="example-2">
                 </a>
@@ -150,7 +161,7 @@
                     <p class="project__type">TEAM</p>
                 </div>
             </li>
-            <li class="project">
+            <li class="project" data-type="javascript">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Payments.png" alt="example-3">
                 </a>
@@ -159,7 +170,7 @@
                     <p class="project__type">TEAM</p>
                 </div>
             </li>
-            <li class="project">
+            <li class="project" data-type="javascript">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Bb.png" alt="example-4">
                 </a>
@@ -168,7 +179,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project">
+            <li class="project" data-type="dynamic">
                 <a href="#" />
                     <img class="project__image" src="images/projects/CardApp.png" alt="example-5">
                 </a>
@@ -177,7 +188,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project">
+            <li class="project" data-type="static">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Opportunities.png" alt="example-6">
                 </a>
@@ -188,7 +199,7 @@
             </li>
         </ul>
     </section>
-    <!-- Footer -->
+    <!-- Footer --> 
     <footer id="contact">
         <div class="contact max-container">
             <button class="contact__email" type="submit">이메일 보내기</button>

@@ -9,3 +9,9 @@
 
 ### CSS Update (08-09-23)
 #### Add CSS(Global+Common) 
+#### Add CSS(V-PC)
+
+### JS Update (08-11-23)
+#### modify CSS(Consolidated into one icon image(svg))
+#### add JS(Main: ArrowUp Scroll)
+#### add JS(Projects: Active+Fliter)

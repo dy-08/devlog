@@ -107,6 +107,15 @@ nav {
     padding: 8px 16px;
 }
 
+.header__menu__item:hover { 
+    border-bottom: 1px solid #FFC03C;
+}
+
+.location {
+    padding: 6px 8px;
+    outline: 1px solid #FFC03C;
+    border-radius: 4px;
+}
 /* Aside */
 .arrow-up {
     position: fixed;
@@ -114,6 +123,7 @@ nav {
     bottom: 2rem;
     color: var(--color-primary);
     opacity: 0;
+    transition: opacity 0.3s;
 }
 
 /* Home */
@@ -128,11 +138,38 @@ nav {
 }
 
 .home__contact {
+    display: inline-block;
     font-size: 1rem;
     padding: 8px 16px;
     border-radius: 4px;
     border: 1px solid var(--color-secondary-dark);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s;
 }
+
+.home__contact::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: -100%;
+    border-radius: 4px;
+    background-color: var(--color-secondary-light);
+    filter: brightness(0.9);
+    transition: transform 0.3s;
+}
+
+.home__contact:hover {
+    color: white;
+}
+
+.home__contact:hover::before {
+    transform: translateY(100%);
+}
+
 
 /* About */
 .about__description {
@@ -145,16 +182,29 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 54px;
+    width: 100%;
 }
 
 .icon__github {
     width: 44px;
     height: 44px;
+    filter: contrast(30%);
+    transition: filter 0.3s;
+}
+
+.icon__github:hover {
+    filter: contrast(100%);
 }
 
 .icon__tistory {
     width: 60px;
     height: 60px;
+    filter: grayscale(1);
+    transition: filter 0.3s;
+}
+
+.icon__tistory:hover {
+    filter: grayscale(0);
 }
 
 /* Skills */
@@ -204,16 +254,25 @@ nav {
 }
 
 /* Projects */
-.projects__menu {
+.categories {
     display: flex;
     justify-content: center;
     gap: 5rem;
 }
 
-.active {
-    background-color: var(--color-secondary);
-    padding: 6px 24px;
+.category {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: var(--font-english);
+    padding: 4px 12px;
     border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.category--selected {
+    background-color: var(--color-secondary-light);
+    filter: brightness(0.9);
 }
 
 .projects {
@@ -221,6 +280,13 @@ nav {
     gap: 2%;
     flex-wrap: wrap;
     margin-top: 3rem;
+    transition: all 250ms;
+}
+
+.projects.anim-out {
+    opacity: 0;
+    transform: translateY(20px);
+    transform: scale(0.96);
 }
 
 .project {
@@ -228,10 +294,10 @@ nav {
 }
 
 .project__data {
+    font-family: var(--font-english);
     display: flex;
     align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 0px 8px 4px;
     position: relative;
 }
 
