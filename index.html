@@ -28,18 +28,19 @@
     <!-- JavaScript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header header--bg">
         <h1 class="header__logo">Thanks for Comming</h1>
         <nav>
             <ul class="header__menu">
-                <li><a class="header__menu__item location" href="#">Home</a></li>
-                <li><a class="header__menu__item" href="#">About</a></li>
-                <li><a class="header__menu__item" href="#">Skills</a></li>
-                <li><a class="header__menu__item" href="#">Projects</a></li>
-                <li><a class="header__menu__item" href="#">Contact</a></li>
+                <li><a class="header__menu__item active" href="#home" data-category="home">Home</a></li>
+                <li><a class="header__menu__item" href="#about" data-category="about">About</a></li>
+                <li><a class="header__menu__item" href="#skills" data-category="skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#projects" data-category="projects">Projects</a></li>
+                <li><a class="header__menu__item" href="#contact" data-category="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -82,7 +83,7 @@
         </ul>
     </section>
     <!-- Skills -->
-    <section id="Skills" class="section max-container">                                               
+    <section id="skills" class="section max-container">                                               
         <h3 class="title">저는 이렇게 코딩해요</h3>
         <div class="skills__container">
             <section class="skills__innerbox">
@@ -200,7 +201,7 @@
         </ul>
     </section>
     <!-- Footer --> 
-    <footer id="contact">
+    <footer id="contact" class="section">
         <div class="contact max-container">
             <button class="contact__email" type="submit">이메일 보내기</button>
             <div class="contact__data">
