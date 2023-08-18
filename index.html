@@ -52,7 +52,7 @@
     </aside>
     <!-- Home -->
     <section id="home" class="section">
-        <img class="avatar" src="images/profile.png" alt="Youngho Profile">
+        <img class="profile" src="images/profile.png" alt="Youngho Profile">
         <h2 class="title home__title">" 어제보다 더 나은 개발자 "</h2>
         <div class="g">
             <a class="home__contact" href="#contact">CONTACT</a>
@@ -202,21 +202,24 @@
     </section>
     <!-- Email -->
     <section id="email">
-        <div class="email__lg">
-            <form action="#" method="post">
+        <div class="email ">
+            <form action="#" method="post" autocomplete="off">
                 <fieldset>
+                <div class="email__container">
                     <legend>필수입력사항</legend>
-                    <section><ul>
-                        <li><a href="#"><i class="fa-solid fa-arrows-up-down"></i></a></li>
-                        <li><a href="#"><i class="fa-solid fa-xmark"></i></i></a></li>
-                    </ul></section>
                     <section>
-                        <label for="from">From:<img src="images/email/avatar.png" alt="avatar"></label>
-                        <input type="text" id="from" name="from">
+                        <ul class="e__icons">
+                            <li><a href="#"><i class="fa-solid fa-arrows-up-down"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-xmark"></i></i></a></li>
+                        </ul>
                     </section>
-                    <section>
-                        <label for="title"></label>
-                        <input type="text" id="title" name="title">
+                    <section class="email__inner e__from">
+                        <label for="e__from">From:<img src="images/email/avatar.png" alt="avatar" class="avatar"></label>
+                        <input type="email" id="e__from" name="from">
+                    </section>
+                    <section class="email__inner e__title">
+                        <label for="e__title"></label>
+                        <input type="text" id="e__title" name="title">
                     </section>
                     <section>
                         <div>
@@ -224,22 +227,26 @@
                             <textarea name="contents" id="contents" cols="30" rows="10"></textarea>
                         </div>
                         <div>
-                            <input type="text" placeholder="업로드파일">
+                            <input type="file" id="file">
                         </div>
                     </section>
-                    <section>
-                        <label for="reset">reset</label>
-                        <input type="reset" id="reset" value="reset">
-                        <label for="file"><i class="fa-solid fa-paperclip"></i></label>
-                        <input type="file" id="file">
-                        <label for="send">send</label>
-                        <input type="submit" id="send" value="send">
+                </div>
+                <div>
+                    <section class="e__functions">
+                        <div>
+                            <label for="e__reset">
+                                <i class="fa-solid fa-trash"></i>
+                            </label>
+                            <input type="reset" id="e__reset" value="">
+                        </div>
+                        <div class="e__function">
+                            <label for="file"><i class="fa-solid fa-paperclip"></i></label>                        
+                            <input type="submit" id="e__send" value="Send">
+                        </div>
                     </section>
+                </div>
                 </fieldset>
             </form>
-        </div>
-        <div class="email__sm">
-
         </div>
     </section>
     <!-- Footer --> 
