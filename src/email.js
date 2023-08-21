@@ -20,3 +20,22 @@ btnExit.addEventListener('click', () => {
 
   formEmail.style.display = 'none';
 });
+
+// smtpJs API
+const btnSend = document.querySelector('#e__send');
+let from = document.querySelector('#e__from');
+let title = document.querySelector('#e__title');
+let contents = document.querySelector('#contents');
+
+btnSend.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('Clicked!!');
+
+  Email.send({
+    SecureToken: '95b5c7c8-2c42-4590-af07-6d311167d86e',
+    To: 'dy-08@naver.com',
+    From: from.value,
+    Subject: title.value,
+    Body: contents.value,
+  }).then((message) => alert(message));
+});
