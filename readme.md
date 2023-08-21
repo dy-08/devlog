@@ -15,3 +15,8 @@
 #### modify CSS(Consolidated into one icon image(svg))
 #### add JS(Main: ArrowUp Scroll)
 #### add JS(Projects: Active+Fliter)
+
+### JS Update (08-21-23)
+#### add HTML,CSS,JS(email.js)
+#### error 405
+#### Modify JS(email.js)
