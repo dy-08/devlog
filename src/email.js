@@ -21,7 +21,7 @@ btnExit.addEventListener('click', () => {
   formEmail.style.display = 'none';
 });
 
-// smtpJs API
+// Api - smtpJs
 const btnSend = document.querySelector('#e__send');
 let from = document.querySelector('#e__from');
 let title = document.querySelector('#e__title');
@@ -34,8 +34,8 @@ btnSend.addEventListener('click', (event) => {
   Email.send({
     SecureToken: '95b5c7c8-2c42-4590-af07-6d311167d86e',
     To: 'dy-08@naver.com',
-    From: from.value,
+    From: 'dy-08@naver.com',
     Subject: title.value,
-    Body: contents.value,
+    Body: `FROM:${from.value}<br> Contents:${contents.value}`,
   }).then((message) => alert(message));
 });
