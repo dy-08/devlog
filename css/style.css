@@ -398,15 +398,30 @@ label {
   position: relative;
   left: 0;
   top: 0;
+  z-index: 11;
   display: none;
+  animation: visible 0.3s alternate;
+}
+
+#email.visible {
+  display: block;
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .email {
   overflow: hidden;
-  position: absolute;
-  z-index: 10;
+  position: fixed;
+  z-index: 12;
   left: 50%;
-  bottom: 48px;
+  bottom: 180px;
   transform: translateX(-50%);
   width: 34%;
   margin: 0 auto;
