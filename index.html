@@ -29,7 +29,8 @@
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
-    <script type="module" src="src/email.js" defer></script>
+    <script src="src/email.js" defer></script>
+    <!-- SmtpJS API -->
     <script src="https://smtpjs.com/v3/smtp.js" defer></script>
 </head>
 <body>
@@ -49,7 +50,7 @@
     <!-- Aside -->
     <aside>
         <a href="#" title="back to top" class="arrow-up">
-            <i class="fa-regular fa-circle-up fa-4x"></i>
+            <i class="fa-solid fa-arrow-up fa-3x"></i>
         </a>
     </aside>
     <!-- Home -->
@@ -216,8 +217,13 @@
                         </ul>
                     </section>
                     <section class="email__inner e__from">
-                        <label for="e__from">From:<img src="images/email/avatar.png" alt="avatar" class="avatar"></label>
-                        <input type="email" id="e__from" name="from">
+                        <div>
+                            <label for="e__from">From:<img src="images/email/avatar.png" alt="avatar" class="avatar"></label>
+                            <input type="email" id="e__from" onkeyup="validateEmail()" name="from">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span id="guideText"></span>
+                        </div>
                     </section>
                     <section class="email__inner e__title">
                         <label for="e__title"></label>
