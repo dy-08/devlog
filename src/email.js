@@ -19,10 +19,30 @@ btnExit.addEventListener('click', (event) => {
   event.preventDefault();
 
   formEmail.style.display = 'none';
+
+  from.value = '';
+  title.value = '';
+  contents.value = '';
+});
+
+// 파일 정보 입력받는 로직
+let uploadFile = document.querySelector('#fileupload');
+let attachments = {
+  name: '',
+  dataUri: '',
+};
+
+uploadFile.addEventListener('change', (event) => {
+  let file = event.srcElement.files[0];
+  let reader = new FileReader();
+  reader.readAsBinaryString(file);
+  reader.onload = function () {
+    let dataUri = 'data:' + file.type + ';base64,' + btoa(reader.result);
+    return (attachments.name = file.name), (attachments.dataUri = dataUri);
+  };
 });
 
 // 이메일 전송 로직
-// Api - smtpJs
 const btnSend = document.querySelector('#e__send');
 let from = document.querySelector('#e__from');
 let title = document.querySelector('#e__title');
@@ -34,13 +54,13 @@ let regExp =
 btnSend.addEventListener('click', (event) => {
   event.preventDefault();
 
+  // 함수로 따로 빼고싶은데 어떻게 리펙토링을 해야할까?
   let isEmail = from.value.match(regExp) ? true : false;
-  console.log(isEmail);
   if (
     isEmail === false ||
-    from.value === '' ||
-    title.value === '' ||
-    contents.value == ''
+    from.value.trim() === '' ||
+    title.value.trim() === '' ||
+    contents.value.trim() == ''
   ) {
     return;
   }
@@ -51,9 +71,22 @@ btnSend.addEventListener('click', (event) => {
     From: 'dy-08@naver.com',
     Subject: `${title.value} From: ${from.value}`,
     Body: contents.value,
+    Attachments: [
+      {
+        name: attachments.name,
+        data: attachments.dataUri,
+      },
+    ],
   }).then((message) => alert(message));
+
+  from.value = '';
+  title.value = '';
+  contents.value = '';
+  attachments.name = '';
+  attachments.dataUri = '';
 });
 
+// 이메일 체크해주는 함수
 function validateEmail() {
   const exclamationMark = document.querySelector('.fa-circle-exclamation');
   const checkMark = document.querySelector('.fa-circle-check');
