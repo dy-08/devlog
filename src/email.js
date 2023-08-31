@@ -78,12 +78,15 @@ btnSend.addEventListener('click', (event) => {
       },
     ],
   }).then((message) => alert(message));
+  console.log(`1:${attachments.name}`);
 
   from.value = '';
   title.value = '';
   contents.value = '';
   attachments.name = '';
+  console.log(`2:${attachments.name}`);
   attachments.dataUri = '';
+  uploadFile.value = '';
 });
 
 // 이메일 체크해주는 함수
