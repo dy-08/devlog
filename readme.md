@@ -8,7 +8,7 @@
 ### HTML Mark Up (08-08-23)
 
 ### CSS Update (08-09-23)
-#### Add CSS(Global+Common) 
+#### Add CSS(Global+Common)
 #### Add CSS(V-PC)
 
 ### JS Update (08-11-23)
@@ -20,3 +20,6 @@
 #### add HTML,CSS,JS(email.js)
 #### error 405
 #### Modify JS(email.js)
+
+### JS Update (08-30-23)
+#### add emailJs Api(Attachments)
