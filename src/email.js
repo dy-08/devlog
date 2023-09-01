@@ -23,6 +23,12 @@ btnExit.addEventListener('click', (event) => {
   from.value = '';
   title.value = '';
   contents.value = '';
+  attachments.name = '';
+  attachments.dataUri = '';
+  uploadFile.value = '';
+  checkMark.style.display = 'none';
+  exclamationMark.style.display = 'none';
+  guideText.innerHTML = '';
 });
 
 // 파일 정보 입력받는 로직
@@ -65,6 +71,8 @@ btnSend.addEventListener('click', (event) => {
     return;
   }
 
+  let person = from.value;
+
   Email.send({
     SecureToken: '95b5c7c8-2c42-4590-af07-6d311167d86e',
     To: 'dy-08@naver.com',
@@ -77,23 +85,31 @@ btnSend.addEventListener('click', (event) => {
         data: attachments.dataUri,
       },
     ],
-  }).then((message) => alert(message));
-  console.log(`1:${attachments.name}`);
+  }).then((message) => {
+    if (message === 'OK') {
+      alert(
+        `${person}님 연락주셔서 감사드립니다.\n1-2일 이내로 확인하고 회신드리겠습니다.\n감사합니다.\n권영호드림`
+      );
+    } else {
+      console.error(message);
+      alert(
+        `${person}님 죄송합니다.\n현재 서비스가 불안정하여 메일 전송에 실패하였습니다.\ndy-08@naver.com으로 연락주시면 1-2일 이내로 확인하고 회신드리겠습니다.\n감사합니다.\n권영호드림`
+      );
+    }
+  });
 
   from.value = '';
   title.value = '';
   contents.value = '';
   attachments.name = '';
-  console.log(`2:${attachments.name}`);
   attachments.dataUri = '';
   uploadFile.value = '';
 });
 
 // 이메일 체크해주는 함수
+const exclamationMark = document.querySelector('.fa-circle-exclamation');
+const checkMark = document.querySelector('.fa-circle-check');
 function validateEmail() {
-  const exclamationMark = document.querySelector('.fa-circle-exclamation');
-  const checkMark = document.querySelector('.fa-circle-check');
-
   if (!from.value.match(regExp)) {
     guideText.innerHTML = 'Check your email';
     checkMark.style.display = 'none';
