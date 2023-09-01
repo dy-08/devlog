@@ -23,3 +23,6 @@
 
 ### JS Update (08-30-23)
 #### add emailJs Api(Attachments)
+
+### JS Update (09-01-23)
+#### add emailJs Api(alert)
