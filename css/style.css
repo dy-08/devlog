@@ -565,6 +565,11 @@ label {
 }
 
 @media screen and (max-width: 768px) {
+  /* Common */
+  .section {
+    padding: 6rem 0;
+  }
+
   /* Header */
   .header__menu {
     display: none;
