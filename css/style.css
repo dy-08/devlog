@@ -591,4 +591,28 @@ label {
   .skills__container {
     flex-direction: column;
   }
+
+  /* Projects */
+  #projects {
+    width: 100%;
+  }
+  .categories {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .category {
+    width: 80%;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 80%;
+  }
+
+  .project {
+    width: 80%;
+    margin: auto;
+  }
 }
