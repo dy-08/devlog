@@ -172,6 +172,10 @@ label {
   filter: brightness(0.9);
 }
 
+.mobile__menu {
+  display: none;
+}
+
 .active {
   padding: 6px 8px;
   outline: 1px solid var(--color-secondary-light);
@@ -561,4 +565,20 @@ label {
 }
 
 @media screen and (max-width: 768px) {
+  .header__menu {
+    display: none;
+  }
+
+  .mobile__menu {
+    display: block;
+  }
+
+  .header__logo {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .lineBreak {
+    display: block;
+  }
 }
