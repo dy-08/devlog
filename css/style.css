@@ -565,6 +565,7 @@ label {
 }
 
 @media screen and (max-width: 768px) {
+  /* Header */
   .header__menu {
     display: none;
   }
@@ -580,5 +581,14 @@ label {
 
   .lineBreak {
     display: block;
+  }
+
+  /* Skills */
+  #skills {
+    width: 80%;
+  }
+
+  .skills__container {
+    flex-direction: column;
   }
 }
