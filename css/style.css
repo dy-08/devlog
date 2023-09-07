@@ -608,11 +608,15 @@ label {
   .projects {
     flex-direction: column;
     gap: 1.2rem;
-    width: 80%;
+    width: 100%;
   }
 
   .project {
     width: 80%;
     margin: auto;
+  }
+
+  .project__image {
+    width: 100%;
   }
 }
