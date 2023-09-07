@@ -619,4 +619,18 @@ label {
   .project__image {
     width: 100%;
   }
+
+  /* Footer */
+  .contact {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact__email {
+    margin-right: 0;
+  }
+
+  .contact__data {
+    margin-left: 0;
+  }
 }
