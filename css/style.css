@@ -594,6 +594,10 @@ label {
     padding: 1.2rem 0;
   }
 
+  .header__menu.menu--active {
+    display: flex;
+  }
+
   .header__menu__item:hover {
     border-bottom: 1px solid var(--color-secondary-light);
   }

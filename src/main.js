@@ -53,3 +53,16 @@ document.addEventListener('scroll', () => {
     arrowUp.style.opacity = 0;
   }
 });
+
+// 모바일버전 메뉴클릭시 나타나게 처리함
+const mobileMenu = document.querySelector('.mobile__menu');
+
+mobileMenu.addEventListener('click', () => {
+  const isActive = menuItems.classList.contains('menu--active');
+
+  if (isActive) {
+    menuItems.classList.remove('menu--active');
+  } else {
+    menuItems.classList.add('menu--active');
+  }
+});
