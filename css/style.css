@@ -35,6 +35,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: var(--font-korean);
   color: var(--color-primary);
   letter-spacing: -1px;
@@ -637,9 +638,45 @@ label {
   }
 
   /* Email */
-  .email {
+  #email {
     width: 80%;
+    z-index: 11;
+    display: none;
   }
+
+  .email {
+    overflow: hidden;
+    position: fixed;
+    z-index: 12;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  #guideText {
+    display: inline-block;
+    padding-left: 6rem;
+  }
+
+  #e__title {
+    font-weight: normal;
+  }
+
+  #contents {
+    font-family: var(--font-korean);
+  }
+
+  #fileupload {
+    padding: 1rem;
+  }
+
   /* Footer */
   .contact {
     flex-direction: column;

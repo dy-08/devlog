@@ -4,12 +4,15 @@
 // const btnEmail = document.querySelector('.contact__email');
 const btnEmail = document.querySelector('#contact__email');
 const formEmail = document.querySelector('#email');
+const body = document.querySelector('body');
 
 btnEmail.addEventListener('click', () => {
   if (formEmail.style.display == 'none') {
     formEmail.style.display = 'block';
+    body.style.overflow = 'hidden';
   } else {
     formEmail.style.display = 'none';
+    body.style.overflow = 'scroll';
   }
 });
 
@@ -20,7 +23,7 @@ btnExit.addEventListener('click', (event) => {
   event.preventDefault();
 
   formEmail.style.display = 'none';
-
+  body.style.overflow = 'scroll';
   from.value = '';
   title.value = '';
   contents.value = '';
