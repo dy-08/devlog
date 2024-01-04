@@ -25,3 +25,5 @@
 
 ### JS Update (09-01-23)
 #### add emailJs Api(alert)
+
+#### Website renewal for Recruiter's Perspective (01-05-24)
