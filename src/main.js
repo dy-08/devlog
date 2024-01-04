@@ -14,7 +14,7 @@ document.addEventListener('scroll', () => {
 });
 
 //메뉴 클릭 시 탑으로부터 여유있게 처리함
-const sectionIds = ['#home', '#about', '#skills', '#projects', '#contact'];
+const sectionIds = ['#about', '#projects', '#contact'];
 const sectionsTopValue = sectionIds.map(
   (id) => document.querySelector(id).offsetTop
 );
@@ -45,7 +45,7 @@ function moveScroll(flag, index) {
 const arrowUp = document.querySelector('.arrow-up');
 
 document.addEventListener('scroll', () => {
-  const homeHeight = document.querySelector('#home').scrollHeight;
+  const homeHeight = document.querySelector('#about').scrollHeight;
 
   if (window.scrollY > homeHeight / 2) {
     arrowUp.style.opacity = 1;

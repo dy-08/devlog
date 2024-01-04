@@ -39,9 +39,8 @@
         <h1 class="header__logo">Thanks for Comming</h1>
         <nav>
             <ul class="header__menu">
-                <li><a class="header__menu__item active" href="#home" data-category="home">Home</a></li>
-                <li><a class="header__menu__item" href="#about" data-category="about">About</a></li>
-                <li><a class="header__menu__item" href="#skills" data-category="skills">Skills</a></li>
+                <li><a class="header__menu__item active" href="#about" data-category="about">About</a></li>
+                <li><a class="header__menu__item" href="#" data-category="resume">Resume</a></li>
                 <li><a class="header__menu__item" href="#projects" data-category="projects">Projects</a></li>
                 <li><a class="header__menu__item" href="#contact" data-category="contact">Contact</a></li>
             </ul>
@@ -56,101 +55,35 @@
             <i class="fa-solid fa-arrow-up fa-3x"></i>
         </a>
     </aside>
-    <!-- Home -->
-    <section id="home" class="section">
-        <img class="profile" src="images/profile.png" alt="Youngho Profile">
-        <h2 class="title home__title">" 어제보다 더 나은 개발자 "</h2>
-        <div class="g">
-            <a class="home__contact" href="#contact">CONTACT</a>
-        </div>
-    </section>
     <!-- About -->
     <section id="about" class="section">
-        <h3 class="title">슬기로운 개발생활</h3>
-        <div class="about__description">
-            <p>2019 Nov ~ 2020 Apr</p>
-            <p>웹퍼블리싱과정 수료</p>
-        </div>
-        <div class="about__description">
-            <p>2012 Mar ~ 2020 Feb</p>
-            <p>컴퓨터공학과 졸업</p>
-        </div>
-        <ul class="about__icons">
-            <li>
-                <a href="https://github.com/dy-08/devlog" target="_blank">
-                    <img class="icon__github" src="images/about/github-mark.svg" alt="git linked">
-                </a>
-            </li>
-            <li>
-                <a href="https://dev-xoxo.tistory.com/" target="_blank">
-                    <img class="icon__tistory" src="images/about/tistory-mark.svg" alt="tistory linked">
-                </a>
-            </li>
-        </ul>
-    </section>
-    <!-- Skills -->
-    <section id="skills" class="section max-container">                                               
-        <h3 class="title">저는 이렇게 코딩해요</h3>
-        <div class="skills__container">
-            <section class="skills__innerbox">
-                <p class="subtitle">HTML&CSS</p>
-                <ul class="skills__markup__icons">
-                    <li><img src="images/skills/html.png" alt="HTML icon"></li>
-                    <li><img src="images/skills/css.png" alt="CSS icon"></li>
-                </ul>
-                <ul class="skills__description">
-                    <li class="skills__description__item">웹표준을 준수하며 코딩</li>
-                    <li class="skills__description__item">BEM 방법론을 사용</li>
-                    <li class="skills__description__item">적응형보다 반응형 웹</li>
-                    <li class="skills__description__item">여러 브라우저 환경 고려</li>
-                </ul>
-            </section>
-            <section class="skills__innerbox">
-                <P class="subtitle">JavaScript</P>
-                <div><img src="images/skills/js.png" alt="JavaScript icon"></div>
-                <ul class="skills__description">
-                    <li class="skills__description__item">ES6+ 구문에 익숙</li>
-                    <li class="skills__description__item">코드 리펙토링</li>
-                    <li class="skills__description__item">웹 APIs 활용</li>
-                    <li class="skills__description__item">타입스크립트 공부중</li>
-                </ul>
-            </section>
-            <section class="skills__otherbox">
-                <p class="subtitle">Tools</p>
-                <ul class="skills__tool__icons">
-                    <li>
-                        <img src="images/skills/vscode.png" alt="VSCode icon">
-                        <p>VSCode</p>
-                    </li>
-                    <li>
-                        <img src="images/skills/git.png" alt="Git icon">
-                        <p>Git</p>
-                    </li>
-                    <li>
-                        <img src="images/skills/figma.png" alt="Figma icon">
-                        <p>Figma</p>
-                    </li>
-                    <li>
-                        <img src="images/skills/photoshop.png" alt="PhotoShop icon">
-                        <p>Photo Shop</p>
-                    </li>
-                </ul>
-            </section>
+        <div class="innerbox">
+            <div class="img__wrap">
+                <img class="profile" src="images/profile.png" alt="Youngho Profile">
+            </div>
+            <div class="title__wrap">
+                <p class="about__title">Front-End, Junior Developer</p>
+                <p class="about__subtitle">I embody UI&#47;UX logic and utilize my programming skills<span class="br"/>to find a way to make better services&#46;</p>
+                <div class="course">
+                    <p class="name">YoungHo Kwon</p>
+                    <p>Computer Engineering &#40;2012~2019&#41;</p>
+                    <p>Complete a Course&#58; Web publishing, Vanilla JS Course </p>
+                </div>
+                    <a href="#" id="contact__email" class="send--email"><span class="text__line">SEND E-Mail</span></a>
+            </div>
         </div>
     </section>
-    <!-- Projects -->
     <section id="projects" class="section max-container">
-        <h3 class="title">프로젝트</h3>
         <nav>
             <ul class="categories">
                 <li><button class="category category--selected" data-category="all" href="#">All</button></li>
-                <li><button class="category" data-category="static" href="#">Static</button></li>
-                <li><button class="category" data-category="dynamic" href="#">Dynamic</button></li>
-                <li><button class="category" data-category="javascript" href="#">JavaScript</button></li>
+                <li><button class="category" data-category="VanillaJS" href="#">Vanilla JS</button></li>
+                <li><button class="category" data-category="WebAPIs" href="#">Web APIs</button></li>
+                <li><button class="category" data-category="Algorithm" href="#">Algorithm</button></li>
             </ul>
         </nav>
         <ul class="projects">
-            <li class="project" data-type="static">
+            <li class="project" data-type="VanillaJS">
                 <a href="#">
                     <img class="project__image" src="images/projects/Luxurious.png" alt="example-1">
                 </a>
@@ -159,7 +92,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project" data-type="dynamic">
+            <li class="project" data-type="VanillaJS">
                 <a href="#" />
                     <img class="project__image" src="images/projects/SMA.png" alt="example-2">
                 </a>
@@ -168,7 +101,7 @@
                     <p class="project__type">TEAM</p>
                 </div>
             </li>
-            <li class="project" data-type="javascript">
+            <li class="project" data-type="WebAPIs">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Payments.png" alt="example-3">
                 </a>
@@ -177,7 +110,7 @@
                     <p class="project__type">TEAM</p>
                 </div>
             </li>
-            <li class="project" data-type="javascript">
+            <li class="project" data-type="VanillaJS">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Bb.png" alt="example-4">
                 </a>
@@ -186,7 +119,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project" data-type="dynamic">
+            <li class="project" data-type="WebAPIs">
                 <a href="#" />
                     <img class="project__image" src="images/projects/CardApp.png" alt="example-5">
                 </a>
@@ -195,7 +128,7 @@
                     <p class="project__type">PERSONAL</p>
                 </div>
             </li>
-            <li class="project" data-type="static">
+            <li class="project" data-type="Algorithm">
                 <a href="#" />
                     <img class="project__image" src="images/projects/Opportunities.png" alt="example-6">
                 </a>
@@ -264,9 +197,8 @@
     <!-- Footer --> 
     <footer id="contact" class="section">
         <div class="contact max-container">
-            <button class="contact__email" type="submit">이메일 보내기</button>
             <div class="contact__data">
-                <p>마지막 수정일 2023.08.01</p>
+                <p>마지막 수정일&#58; 2023.08.01</p>
                 <p>This site is intended for personal portfolio use, not for commercial purposes.</p>
                 <p>COPYRIGHT © 2023 KWONYOUNGHO. ALL RIGHTS RESERVED.</p>
             </div>
