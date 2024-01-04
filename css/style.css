@@ -541,7 +541,7 @@ label {
 @media screen and (max-width: 768px) {
   /* Common */
   .section {
-    padding: 6rem 0;
+    padding: 6rem 0 0 0;
   }
 
   /* Header */
@@ -586,6 +586,10 @@ label {
   }
 
   /* About */
+  #about {
+    margin-bottom: 0;
+  }
+
   .innerbox {
     width: 100%;
     flex-direction: column;
@@ -603,10 +607,26 @@ label {
 
   .about__subtitle {
     font-size: 1.2rem;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 26px;
   }
 
   .name {
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .course {
+    text-align: center;
+  }
+
+  .send--email {
+    width: 100%;
+    color: var(--color-secondary-dark);
+    text-align: center;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
   }
 
   /* Projects */
@@ -678,6 +698,10 @@ label {
   }
 
   /* Footer */
+  #contact {
+    margin-top: 3rem;
+  }
+
   .contact {
     flex-direction: column;
     gap: 2rem;
