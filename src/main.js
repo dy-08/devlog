@@ -1,5 +1,9 @@
 'use strict';
 
+document.querySelector('.pageResume').addEventListener('click', () => {
+  location.assign(`./resume.html`);
+});
+
 // 스크롤하면 헤더 변경(투명 -> 백그라운드+쉐도우)
 const header = document.querySelector('.header');
 
